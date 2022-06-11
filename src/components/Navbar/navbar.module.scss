@@ -1,0 +1,30 @@
+.navbar {
+  align-items: center;
+  display: flex;
+  background: #000;
+  justify-content: space-around;
+  position: absolute;
+  color: #fff;
+  top: 0;
+  width: 100%;
+
+  &__options {
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    &_item {
+      font-style: italic;
+      font-size: 1.2rem;
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+}
