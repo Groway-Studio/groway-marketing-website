@@ -1,0 +1,17 @@
+@import "../../styles/styles.scss";
+
+.testimonials {
+  span {
+    @include slanted_text;
+    background: $purple;
+    color: $white;
+    padding: 0 2.5rem 0 0.5rem;
+  }
+
+  &__image {
+    background: url("../../assets/testimonials.svg") no-repeat;
+    background-size: contain;
+    height: 400px;
+    width: 100%;
+  }
+}

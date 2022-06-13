@@ -1,8 +1,12 @@
+import styles from "./testimonials.module.scss";
+
 const Testimonials = () => {
   return (
-    <div>
-      <h2>Nuestros clientes dicen...</h2>
-      <div className="row">Imagen</div>
+    <div className={styles.testimonials}>
+      <h2>
+        Nuestros <span>Clientes dicen...</span>
+      </h2>
+      <div className={styles.testimonials__image}></div>
       <div className="row">
         <ul>
           <li>
@@ -18,7 +22,7 @@ const Testimonials = () => {
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
           </li>
           <li>
-            <h4>Cristisn</h4>
+            <h4>Cristian</h4>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
           </li>
         </ul>

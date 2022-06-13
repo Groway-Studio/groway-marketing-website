@@ -3,13 +3,19 @@ import styles from "./navbar.module.scss";
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
-      <div className="logo">groway.studio</div>
+      <div className="logo">
+        <img
+          src="./src/assets/groway.svg"
+          alt="Groway Studio"
+          draggable={false}
+        />
+      </div>
       <ul className={styles.navbar__options}>
         <li className={styles.navbar__options_item}>
           <a href="#">Inicio</a>
         </li>
         <li className={styles.navbar__options_item}>
-          <a href="#">Servicios</a>
+          <a href="#servicios">Servicios</a>
         </li>
         <li className={styles.navbar__options_item}>
           <a href="#">¿Quiénes Somos?</a>

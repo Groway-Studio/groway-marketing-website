@@ -1,10 +1,18 @@
+import styles from "./how_do_we_do_it.module.scss";
+
 const HowDoWeDoIt = () => {
   return (
-    <div>
-      <div className="row">Imagen gráficos</div>
-      <div className="row">
-        <h3>¿Cómo lo hacemos?</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    <div className={styles.howDoWeDoIt}>
+      <div className={styles.howDoWeDoIt__graphic}></div>
+      <div className={styles.howDoWeDoIt__content}>
+        <h2>
+          ¿Cómo lo <span>hacemos?</span>
+        </h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium
+          optio nesciunt odio corporis possimus suscipit recusandae cumque
+          facilis ea fugiat.
+        </p>
       </div>
     </div>
   );

@@ -6,12 +6,13 @@ const Header = () => {
     <header className={styles.header}>
       <Navbar />
 
-      <div>
-        <div className="row">Imagen</div>
+      <div className={styles.header__content}>
+        <div className={styles.header__heroImage}></div>
 
-        <div className="row">
-          <h1>
-            Todo se trata de usar la estrategia correcta en el momento correcto
+        <div className={styles.header__description}>
+          <h1 className={styles.header__description_mainTitle}>
+            Todo se trata de usar la <span>estrategia correcta</span> en el{" "}
+            <span>momento correcto</span>
           </h1>
 
           <button>Lorem ipsum</button>

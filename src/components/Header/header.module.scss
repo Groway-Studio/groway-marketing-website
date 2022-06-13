@@ -1,14 +1,79 @@
+@import "../../styles/styles.scss";
+
 .header {
-  height: 100vh;
-  display: flex;
+  background: url("../../assets/header_background.svg") no-repeat;
+  background-size: contain;
+  background-position-y: -70px;
   flex-direction: column;
-  justify-content: center;
+  height: 100vh;
+  min-height: 100%;
+  display: flex;
   align-items: center;
+  justify-content: space-around;
   position: relative;
 
+  &__heroImage {
+    background-size: contain;
+    background: url("../../assets/header_image.svg") no-repeat;
+    height: 400px;
+    width: 100%;
+  }
+
+  &__description {
+    text-align: left;
+    line-height: 3rem;
+
+    &_mainTitle {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    span,
+    button {
+      background: $pink;
+      color: $white;
+    }
+
+    span {
+      @include slanted_text;
+      margin-top: 0.3rem;
+
+      &:first-child {
+        padding: 0 1rem 0 2rem;
+        margin-left: -2rem;
+      }
+
+      &:last-child {
+        padding: 0 2rem 0 3rem;
+        margin-left: -3rem;
+      }
+    }
+
+    button {
+      border-radius: 10px;
+      text-transform: uppercase;
+      border: 2px solid transparent;
+      display: block;
+      margin: 4rem auto 0;
+      padding: 5px 0;
+      width: 60%;
+      box-shadow: 0px 4px 5px -2px $black-shadow;
+      -webkit-box-shadow: 0px 4px 5px -2px $black-shadow;
+      -moz-box-shadow: 0px 4px 5px -2px $black-shadow;
+
+      &:hover {
+        background: $white;
+        border-color: $primaryColor;
+        transition: all 0.3s ease-in-out;
+        color: $primaryColor;
+      }
+    }
+  }
+
   &__content {
-    display: flex;
     align-items: center;
-    height: 100%;
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
   }
 }

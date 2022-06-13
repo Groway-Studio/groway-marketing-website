@@ -1,0 +1,42 @@
+@import "../../styles/styles.scss";
+
+.ourServices {
+  height: 70vh;
+
+  span {
+    @include slanted_text;
+    background: $yellow;
+    padding: 0 3.5rem 0 1rem;
+  }
+
+  &__card_item {
+    display: grid;
+    grid-template-rows: 50% 20% 30%;
+
+    img {
+      margin: auto;
+      height: 200px;
+    }
+  }
+}
+.cards_container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  margin: auto;
+
+  h3 {
+    @include flex_center;
+    color: $yellow;
+    font-size: 2rem;
+    height: 80px;
+    margin: auto;
+    width: 50%;
+  }
+
+  p {
+    margin: auto;
+    font-size: 1.3rem;
+    width: 60%;
+    margin-top: 0.5rem;
+  }
+}

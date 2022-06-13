@@ -1,18 +1,23 @@
+import styles from "./why_choose_us.module.scss";
+
 const WhyChooseUs = () => {
   return (
-    <div>
-      <div className="row">
-        <h3>¿Por qué elegirnos?</h3>
+    <div className={styles.whyChooseUs}>
+      <div className={styles.whyChooseUs__content}>
+        <h2>
+          ¿Por qué <span>elegirnos?</span>
+        </h2>
 
-        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
-        <ul>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+
+        <ul className={styles.WhyChooseUs__advantages}>
           <li>Lorem ipsum tus</li>
           <li>Lorem ipsum tus</li>
           <li>Lorem ipsum tus</li>
           <li>Lorem ipsum tus</li>
         </ul>
       </div>
-      <div className="row">Imagen de gráficos</div>
+      <div className={styles.whyChooseUs__graphic}></div>
     </div>
   );
 };

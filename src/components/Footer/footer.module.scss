@@ -1,0 +1,11 @@
+@import "../../styles/styles.scss";
+
+.footer {
+  @include flex_center;
+  a {
+    text-decoration: none;
+  }
+  & * {
+    color: $white;
+  }
+}

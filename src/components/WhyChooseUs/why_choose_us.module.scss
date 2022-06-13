@@ -1,0 +1,62 @@
+@import "../../styles/styles.scss";
+
+.whyChooseUs {
+  @include flex_center;
+  height: 70vh;
+
+  &__content {
+    span {
+      @include slanted_text;
+      background: $blue-light;
+      color: $white;
+      padding: 0 2rem 0 0.5rem;
+    }
+
+    p {
+      margin: 0 auto;
+      line-height: 2rem;
+      width: 80%;
+    }
+
+    li {
+      &::before {
+        padding-inline: 1rem;
+        margin-inline: 1rem;
+      }
+
+      &::marker {
+        content: "⬤ ";
+        vertical-align: middle;
+        padding-inline: 1rem;
+      }
+
+      &::after {
+        margin-left: 10px;
+      }
+    }
+
+    p,
+    li {
+      text-align: left;
+      font-size: 1.3rem;
+      vertical-align: middle;
+    }
+
+    ul {
+      line-height: 3rem;
+      padding-left: 5rem;
+      list-style-position: inside;
+    }
+  }
+
+  &__graphic {
+    background: url("../../assets/why_choose_us.svg") no-repeat;
+    background-size: contain;
+    height: 400px;
+    width: 650px;
+  }
+
+  &__advantages {
+    list-style-type: square;
+  }
+}
