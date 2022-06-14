@@ -1,11 +1,38 @@
 @import "../../styles/styles.scss";
 
 .footer {
-  @include flex_center;
-  a {
-    text-decoration: none;
-  }
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 15% 15% 25% 30%;
+
+  // &__logo {
+  //   display: flex;
+  //   align-items: center;
+  // }
+
   & * {
     color: $white;
+  }
+
+  &__socialMedia {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  // &__address {
+  // }
+
+  &__country_name {
+    font-weight: bold;
+    margin: 0 auto 0.4rem 0;
+  }
+
+  &__phone_numbers {
+    p {
+      font-weight: bold;
+    }
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    gap: 1rem;
   }
 }

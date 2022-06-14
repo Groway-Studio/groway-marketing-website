@@ -1,6 +1,8 @@
+@import "../../styles/styles.scss";
+
 .footer__container {
-  background: #031d44;
+  background: $primaryColor;
   bottom: 0;
   color: #fff;
-  padding: 3rem;
+  padding: 3rem 0;
 }
