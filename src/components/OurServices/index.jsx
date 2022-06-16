@@ -2,7 +2,7 @@ import styles from "./our_services.module.scss";
 
 const OurServices = () => {
   return (
-    <div className={styles.ourServices} id="servicios">
+    <section className={styles.ourServices} id="servicios">
       <h2>
         Nuestros <span>Servicios</span>
       </h2>
@@ -47,7 +47,7 @@ const OurServices = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

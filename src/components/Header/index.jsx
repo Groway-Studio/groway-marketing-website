@@ -7,7 +7,13 @@ const Header = () => {
       <Navbar />
 
       <div className={styles.header__content}>
-        <div className={styles.header__heroImage}></div>
+        <div className={styles.header__heroImage}>
+          <img
+            src="./src/assets/header_image.svg"
+            alt="Groway.Studio"
+            draggable={false}
+          />
+        </div>
 
         <div className={styles.header__description}>
           <h1 className={styles.header__description_mainTitle}>

@@ -3,6 +3,10 @@
 .ourServices {
   height: 70vh;
 
+  @include phone {
+    height: 100%;
+  }
+
   span {
     @include slanted_text;
     background: $yellow;
@@ -21,22 +25,30 @@
 }
 .cards_container {
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: repeat(3, 33%);
   margin: auto;
+
+  @include phone {
+    grid-template-columns: 1fr;
+  }
+
+  h3,
+  p {
+    text-align: center;
+    margin: auto;
+  }
 
   h3 {
     @include flex_center;
     color: $yellow;
     font-size: 2rem;
     height: 80px;
-    margin: auto;
-    width: 50%;
+    width: 55%;
   }
 
   p {
-    margin: auto;
     font-size: 1.3rem;
-    width: 60%;
+    width: 65%;
     margin-top: 0.5rem;
   }
 }

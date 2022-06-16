@@ -1,19 +1,26 @@
 @import "../../styles/styles.scss";
 
 .howDoWeDoIt {
-  @include flex_center;
-  height: 50vh;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  align-items: center;
+
+  @include phone {
+    height: 100%;
+    grid-template-columns: 1fr;
+  }
 
   &__graphic {
-    background: url("../../assets/agile_marketing.svg") no-repeat;
-    background-size: contain;
-    height: 300px;
-    width: 600px;
+    img {
+      width: 100%;
+    }
+
+    @include phone {
+      order: 2;
+    }
   }
 
   &__content {
-    width: 35%;
-
     span {
       @include slanted_text;
       background: $blue-light;
@@ -25,8 +32,12 @@
       text-align: right;
       font-size: 1.2rem;
       line-height: 2rem;
-      width: 60%;
+      width: 70%;
       margin: auto;
+    }
+
+    @include phone {
+      order: 1;
     }
   }
 }

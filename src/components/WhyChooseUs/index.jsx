@@ -2,7 +2,7 @@ import styles from "./why_choose_us.module.scss";
 
 const WhyChooseUs = () => {
   return (
-    <div className={styles.whyChooseUs}>
+    <section className={styles.whyChooseUs}>
       <div className={styles.whyChooseUs__content}>
         <h2>
           ¿Por qué <span>elegirnos?</span>
@@ -17,8 +17,14 @@ const WhyChooseUs = () => {
           <li>Lorem ipsum tus</li>
         </ul>
       </div>
-      <div className={styles.whyChooseUs__graphic}></div>
-    </div>
+      <div className={styles.whyChooseUs__graphic}>
+        <img
+          src="./src/assets/why_choose_us.svg"
+          alt="Why Choose Us Picture"
+          draggable={false}
+        />
+      </div>
+    </section>
   );
 };
 

@@ -2,8 +2,14 @@ import styles from "./how_do_we_do_it.module.scss";
 
 const HowDoWeDoIt = () => {
   return (
-    <div className={styles.howDoWeDoIt}>
-      <div className={styles.howDoWeDoIt__graphic}></div>
+    <section className={styles.howDoWeDoIt}>
+      <div className={styles.howDoWeDoIt__graphic}>
+        <img
+          src="./src/assets/agile_marketing.svg"
+          alt="How We Do It Picture"
+          draggable={false}
+        />
+      </div>
       <div className={styles.howDoWeDoIt__content}>
         <h2>
           ¿Cómo lo <span>hacemos?</span>
@@ -14,7 +20,7 @@ const HowDoWeDoIt = () => {
           facilis ea fugiat.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -7,16 +7,18 @@ import {
   WhyChooseUsContainer,
 } from "./containers";
 
-import "./App.css";
+import styles from "./App.module.scss";
 
 const App = () => {
   return (
     <div className="App">
       <HeaderContainer />
-      <OurServicesContainer />
-      <WhyChooseUsContainer />
-      <HowDoWeDoItContainer />
-      <TestimonialsContainer />
+      <div className={styles.container}>
+        <OurServicesContainer />
+        <WhyChooseUsContainer />
+        <HowDoWeDoItContainer />
+        <TestimonialsContainer />
+      </div>
       <FooterContainer />
     </div>
   );

@@ -8,10 +8,29 @@
     padding: 0 2.5rem 0 0.5rem;
   }
 
+  &__content {
+    display: grid;
+    grid-template-columns: 30% 70%;
+  }
+
   &__image {
     background: url("../../assets/testimonials.svg") no-repeat;
     background-size: contain;
     height: 400px;
     width: 100%;
+  }
+
+  &__comments {
+    display: grid;
+    grid-template-rows: repeat(2, 40%);
+    grid-template-columns: 40% 40%;
+    background-size: contain;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+
+    &_item {
+      background: url("../../assets/comment.svg") no-repeat;
+    }
   }
 }
