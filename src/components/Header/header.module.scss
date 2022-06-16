@@ -5,7 +5,6 @@
   background-size: contain;
   flex-direction: column;
   height: 100vh;
-  min-height: 100%;
   background-position-y: -50px;
   display: flex;
   align-items: center;
@@ -25,8 +24,10 @@
   }
 
   @include phone {
-    background-position-y: 0;
+    background: url("../../assets/header_background_mobile.svg") no-repeat;
+    background-size: contain;
     height: 100%;
+    background-position-y: 20px;
   }
 
   &__heroImage {
@@ -36,17 +37,24 @@
 
     @include phone {
       order: 1;
-      width: 90%;
     }
   }
 
   &__description {
     text-align: left;
     line-height: 3rem;
+    position: relative;
 
     @include phone {
       width: 90%;
       margin: auto;
+      line-height: 1.5rem;
+    }
+
+    h1 {
+      @include phone {
+        color: $white;
+      }
     }
 
     &_mainTitle {
@@ -71,11 +79,21 @@
       &:first-child {
         padding: 0 1rem 0 2rem;
         margin-left: -2rem;
+
+        @include phone {
+          padding: 0 0.3rem 0 0.5rem;
+          margin-left: -0.5rem;
+        }
       }
 
       &:last-child {
         padding: 0 2rem 0 3rem;
         margin-left: -3rem;
+
+        @include phone {
+          padding: 0 1rem 0 1.5rem;
+          margin-left: -1.5rem;
+        }
       }
     }
 
@@ -85,9 +103,12 @@
       border: 2px solid transparent;
       display: block;
       font-size: 1.5rem;
-      margin: 4rem auto 0;
+
       padding: 5px 0;
-      width: 60%;
+      width: 350px;
+      position: absolute;
+      left: 30px;
+      top: 270px;
       box-shadow: 0px 4px 5px -2px $black-shadow;
       -webkit-box-shadow: 0px 4px 5px -2px $black-shadow;
       -moz-box-shadow: 0px 4px 5px -2px $black-shadow;
@@ -109,12 +130,14 @@
     display: grid;
     margin-top: 5rem;
     gap: 4rem;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 40%);
+    align-items: center;
+    justify-content: center;
 
     @include phone {
       grid-template-rows: auto auto;
-      margin: 0;
-      gap: 1rem;
+      width: 85%;
+      gap: 0;
       grid-template-columns: 1fr;
     }
   }

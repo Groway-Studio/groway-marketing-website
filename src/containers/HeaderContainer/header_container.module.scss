@@ -1,7 +1,7 @@
 @import "../../styles/styles.scss";
 
-.our_services_container {
+.header_container {
   @include phone {
-    padding-bottom: 3rem;
+    margin-bottom: 3rem;
   }
 }

@@ -3,7 +3,7 @@ import styles from "./our_services_container.module.scss";
 
 const OurServicesContainer = () => {
   return (
-    <div>
+    <div className={styles.our_services_container}>
       <OurServices />
     </div>
   );

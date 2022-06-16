@@ -9,9 +9,22 @@
   top: 0;
   padding: 2rem 0;
   width: 100%;
+  background: $black;
 
   @include phone {
-    display: none;
+    padding: 1rem 0;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    @include phone {
+      width: 30%;
+      margin-left: 1rem;
+    }
+
+    img {
+      width: 100%;
+    }
   }
 
   &__options {
@@ -19,17 +32,41 @@
     list-style: none;
     padding: 0;
 
+    @include phone {
+      flex-direction: column;
+      margin-right: 1rem;
+    }
+
     &_item {
       font-style: italic;
       font-size: 1.3rem;
 
-      &:not(:last-child) {
+      @include phone {
+        display: none;
+      }
+
+      &:not(:nth-child(4)) {
         margin-right: 2rem;
       }
 
       a {
         text-decoration: none;
         color: $white;
+      }
+    }
+  }
+
+  &__responsive {
+    li {
+      display: none;
+      width: 30px;
+      height: 3px;
+      background-color: aliceblue;
+      @include phone {
+        display: flex;
+        &:not(:last-child) {
+          margin-bottom: 7px;
+        }
       }
     }
   }

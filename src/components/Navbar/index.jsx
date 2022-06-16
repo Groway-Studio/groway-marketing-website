@@ -3,7 +3,7 @@ import styles from "./navbar.module.scss";
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
-      <div className="logo">
+      <div className={styles.navbar__logo}>
         <img
           src="./src/assets/groway.svg"
           alt="Groway Studio"
@@ -23,6 +23,12 @@ const Navbar = () => {
         <li className={styles.navbar__options_item}>
           <a href="#">Contáctanos</a>
         </li>
+
+        <div className={styles.navbar__responsive}>
+          <li></li>
+          <li></li>
+          <li></li>
+        </div>
       </ul>
     </nav>
   );
