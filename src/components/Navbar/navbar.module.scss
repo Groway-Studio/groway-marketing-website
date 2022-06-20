@@ -9,17 +9,22 @@
   top: 0;
   padding: 2rem 0;
   width: 100%;
-  background: $black;
 
   @include phone {
-    padding: 1rem 0;
+    background: $black;
     justify-content: space-between;
+    padding: 1rem 0;
+  }
+
+  @include tablet {
+    background: $black;
   }
 
   &__logo {
     @include phone {
       width: 30%;
-      margin-left: 1rem;
+      margin-left: 1.5rem;
+      order: -1;
     }
 
     img {
@@ -56,18 +61,35 @@
     }
   }
 
-  &__responsive {
-    li {
+  &__burger {
+    &_menu {
+      order: 2;
       display: none;
-      width: 30px;
-      height: 3px;
-      background-color: aliceblue;
+      margin-right: 1.5rem;
+
       @include phone {
-        display: flex;
-        &:not(:last-child) {
-          margin-bottom: 7px;
-        }
+        display: block;
+      }
+    }
+
+    &_line {
+      width: 35px;
+      height: 3px;
+      background: $white;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
       }
     }
   }
+
+  @include phone {
+    display: flex;
+
+    order: 2;
+  }
+}
+
+input[type="checkbox"] {
+  display: none;
 }

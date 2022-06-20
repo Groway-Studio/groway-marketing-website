@@ -3,6 +3,13 @@ import styles from "./navbar.module.scss";
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
+      <input type="checkbox" name="checkbox" id="checkbox" />
+      <label htmlFor="checkbox" className={styles.navbar__burger_menu}>
+        <div className={styles.navbar__burger_line}></div>
+        <div className={styles.navbar__burger_line}></div>
+        <div className={styles.navbar__burger_line}></div>
+      </label>
+
       <div className={styles.navbar__logo}>
         <img
           src="./src/assets/groway.svg"
@@ -23,12 +30,6 @@ const Navbar = () => {
         <li className={styles.navbar__options_item}>
           <a href="#">Contáctanos</a>
         </li>
-
-        <div className={styles.navbar__responsive}>
-          <li></li>
-          <li></li>
-          <li></li>
-        </div>
       </ul>
     </nav>
   );

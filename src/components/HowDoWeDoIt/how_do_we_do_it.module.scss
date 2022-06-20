@@ -10,6 +10,10 @@
     grid-template-columns: 1fr;
   }
 
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+
   &__graphic {
     img {
       width: 100%;
@@ -38,6 +42,10 @@
       line-height: 2rem;
       width: 70%;
       margin: auto;
+
+      @include tablet {
+        text-align: left;
+      }
     }
 
     @include phone {

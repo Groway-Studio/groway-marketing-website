@@ -26,9 +26,11 @@
     img {
       margin: auto;
       height: 200px;
+      width: 100%;
     }
   }
 }
+
 .cards_container {
   display: grid;
   grid-template-columns: repeat(3, 33%);
@@ -52,11 +54,19 @@
     font-size: 2rem;
     height: 80px;
     width: 55%;
+
+    @include tablet {
+      height: 100px;
+    }
   }
 
   p {
     font-size: 1.3rem;
     width: 65%;
     margin-top: 0.5rem;
+
+    @include tablet {
+      width: 100%;
+    }
   }
 }

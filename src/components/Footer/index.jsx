@@ -7,10 +7,7 @@ const Footer = () => {
         <img src="./src/assets/groway.svg" alt="Groway Studio" />
       </div>
       <div className={styles.footer__contact}>
-        Escríbenos a:{" "}
-        <strong>
-          <a href="mailto:hola@groway.studio">hola@groway.studio</a>
-        </strong>
+        Escríbenos a: <a href="mailto:hola@groway.studio">hola@groway.studio</a>
         <div className={styles.footer__socialMedia}>
           <img src="./src/assets/social-media/instagram.svg" alt="Instagram" />
           <img src="./src/assets/social-media/linkedin.svg" alt="Linkdein" />

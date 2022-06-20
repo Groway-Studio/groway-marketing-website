@@ -16,11 +16,11 @@
   }
 
   @include desktop {
-    background-position-y: -65px;
+    background-position-y: -10px;
   }
 
   @include tablet {
-    background-position-y: 0;
+    background-position-y: 100px;
   }
 
   @include phone {
@@ -46,12 +46,18 @@
     position: relative;
 
     @include phone {
-      width: 90%;
-      margin: auto;
       line-height: 1.5rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    @include tablet {
+      display: flex;
+      justify-content: center;
     }
 
     h1 {
+      font-weight: bold;
       @include phone {
         color: $white;
       }
@@ -62,7 +68,14 @@
       font-weight: bold;
 
       @include phone {
+        width: 290px;
         font-size: 1.5rem;
+        margin-left: 2rem;
+      }
+
+      @include tablet {
+        width: 400px;
+        margin-left: 2rem;
       }
     }
 
@@ -123,6 +136,13 @@
       @include phone {
         display: none;
       }
+
+      @include tablet {
+        left: 20%;
+        top: 220px;
+        align-items: center;
+        text-align: center;
+      }
     }
   }
 
@@ -130,7 +150,7 @@
     display: grid;
     margin-top: 5rem;
     gap: 4rem;
-    grid-template-columns: repeat(2, 40%);
+    grid-template-columns: calc(100% - 300px) 400px;
     align-items: center;
     justify-content: center;
 
@@ -139,6 +159,13 @@
       width: 85%;
       gap: 0;
       grid-template-columns: 1fr;
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      width: 75%;
+      margin-top: 0;
+      gap: 1rem;
     }
   }
 }

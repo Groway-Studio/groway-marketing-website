@@ -9,6 +9,10 @@
     height: 100%;
   }
 
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+
   &__content {
     span {
       @include slanted_text;
@@ -49,12 +53,21 @@
       text-align: left;
       font-size: 1.3rem;
       vertical-align: middle;
+
+      @include tablet {
+        text-align: center;
+        width: 100%;
+      }
     }
 
     ul {
       line-height: 3rem;
       padding-left: 5rem;
       list-style-position: inside;
+
+      @include tablet {
+        padding: 0;
+      }
     }
   }
 

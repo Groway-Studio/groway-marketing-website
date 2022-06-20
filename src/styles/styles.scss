@@ -46,10 +46,11 @@ $desktop_xl: 1920px;
 
 @mixin base {
   width: $container_width;
+
   margin: auto;
 
   @include tablet {
-    width: $container_width - 50px;
+    width: 90%;
   }
 
   @include phone {

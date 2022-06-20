@@ -1,7 +1,5 @@
 @import "../../styles/styles.scss";
 
 .how_do_we_do_it_container {
-  @include phone {
-    padding-bottom: 3rem;
-  }
+  padding: 1rem 0;
 }

@@ -12,33 +12,70 @@
     }
   }
 
-  &__content {
-    display: grid;
-    grid-template-columns: 30% 70%;
+  h4 {
+    margin-left: 4rem;
 
     @include phone {
+      width: 50%;
+      margin: 0;
+      padding: 1rem 0 1rem 4rem;
+    }
+  }
+
+  p {
+    width: 90%;
+    margin: auto;
+
+    @include phone {
+      font-size: 0.9rem;
+      width: 70%;
+    }
+
+    @include tablet {
+      width: 75%;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+    @include phone {
+      grid-template-columns: 1fr;
+    }
+
+    @include tablet {
       grid-template-columns: 1fr;
     }
   }
 
   &__image {
-    background: url("../../assets/testimonials.svg") no-repeat;
-    background-size: contain;
-    height: 400px;
-    width: 100%;
+    img {
+      width: 100%;
+    }
   }
 
   &__comments {
     display: grid;
-    grid-template-rows: repeat(2, 40%);
-    grid-template-columns: 40% 40%;
+    grid-template-rows: repeat(2, 150px);
+    grid-template-columns: repeat(2, 50%);
     background-size: contain;
-    gap: 0.5rem;
+    gap: 1rem;
     list-style: none;
     padding: 0;
 
+    @include phone {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, auto);
+      gap: 0.5rem;
+      width: 85%;
+      margin: auto;
+    }
+
     &_item {
-      background: url("../../assets/comment.svg") no-repeat;
+      border: 1px solid $black;
+      padding: 0.3rem;
+      // background: url("../../assets/comment.svg") no-repeat;
     }
   }
 }

@@ -1,8 +1,9 @@
 import { Testimonials } from "../../components";
+import styles from "./testimonials_container.module.scss";
 
 const TestimonialsContainer = () => {
   return (
-    <div>
+    <div className={styles.testimonials_container}>
       <Testimonials />
     </div>
   );

@@ -1,7 +1,5 @@
 @import "../../styles/styles.scss";
 
 .why_choose_us_container {
-  @include phone {
-    padding-bottom: 3rem;
-  }
+  padding: 1rem 0;
 }

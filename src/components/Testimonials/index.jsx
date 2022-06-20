@@ -7,7 +7,13 @@ const Testimonials = () => {
         Nuestros <span>Clientes dicen...</span>
       </h2>
       <div className={styles.testimonials__content}>
-        <div className={styles.testimonials__image}></div>
+        <div className={styles.testimonials__image}>
+          <img
+            src="./src/assets/testimonials.svg"
+            alt="Testimonials"
+            draggable={false}
+          />
+        </div>
 
         <ul className={styles.testimonials__comments}>
           <li className={styles.testimonials__comments_item}>
