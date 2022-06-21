@@ -3,12 +3,16 @@ import styles from "./navbar.module.scss";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
-  const [width, setWidth] = useState(null);
+  const [width, setWidth] = useState(0);
 
   useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
 
     return () => window.removeEventListener("resize", () => {});
+  }, []);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
   }, []);
 
   return (
@@ -17,7 +21,7 @@ const Navbar = () => {
         type="checkbox"
         name="checkbox"
         id="checkbox"
-        onClick={() => setShow(!show)}
+        onClick={() => (width < 600 ? setShow(!show) : setShow(false))}
       />
       <label htmlFor="checkbox" className={styles.navbar__burger_menu}>
         <div className={styles.navbar__burger_line}></div>

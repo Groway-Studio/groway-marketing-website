@@ -19,6 +19,13 @@
 
     width: 80%;
   }
+
+  @include tablet {
+    gap: 1rem;
+
+    grid-template-columns: repeat(3, auto);
+  }
+
   &__logo {
     @include phone {
       grid-area: logo;
@@ -35,6 +42,10 @@
 
     a {
       font-weight: bold;
+
+      @include tablet {
+        display: block;
+      }
     }
   }
 

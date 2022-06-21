@@ -117,7 +117,7 @@
     z-index: 200;
     width: 100%;
     text-align: center;
-    animation: myAnimation 0.3s linear 0s 1 normal forwards;
+    animation: myAnimation 0.2s linear 0s 1 normal forwards;
     transition: all 0.5s cubic-bezier(0.26, 0.59, 0.83, 0.67);
 
     li {
@@ -146,7 +146,7 @@ input[type="checkbox"] {
 
 @keyframes myAnimation {
   0% {
-    transform: translateY(-50px);
+    transform: translateY(-40px);
   }
 
   100% {

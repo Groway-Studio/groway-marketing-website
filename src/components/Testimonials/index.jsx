@@ -17,20 +17,16 @@ const Testimonials = () => {
 
         <ul className={styles.testimonials__comments}>
           <li className={styles.testimonials__comments_item}>
-            <h4>Shamira</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <img src="./src/assets/comment_box/comment_1.svg" alt="Comment1" />
           </li>
           <li className={styles.testimonials__comments_item}>
-            <h4>Luciana</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <img src="./src/assets/comment_box/comment_2.svg" alt="Comment2" />
           </li>
           <li className={styles.testimonials__comments_item}>
-            <h4>Alejandra</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <img src="./src/assets/comment_box/comment_3.svg" alt="Comment3" />
           </li>
           <li className={styles.testimonials__comments_item}>
-            <h4>Cristian</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <img src="./src/assets/comment_box/comment_4.svg" alt="Comment4" />
           </li>
         </ul>
       </div>
