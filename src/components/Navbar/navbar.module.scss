@@ -27,6 +27,10 @@
       order: -1;
     }
 
+    @include tablet {
+      width: 20%;
+    }
+
     img {
       width: 100%;
     }
@@ -39,7 +43,7 @@
 
     @include phone {
       flex-direction: column;
-      margin-right: 1rem;
+      // margin-right: 1rem;
     }
 
     &_item {
@@ -48,15 +52,30 @@
 
       @include phone {
         display: none;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @include tablet {
+        font-size: 1.1rem;
       }
 
       &:not(:nth-child(4)) {
         margin-right: 2rem;
+
+        @include tablet {
+          margin-right: 1rem;
+        }
+
+        @include phone {
+          margin: 0;
+        }
       }
 
       a {
         text-decoration: none;
         color: $white;
+        width: 100%;
       }
     }
   }
@@ -66,6 +85,7 @@
       order: 2;
       display: none;
       margin-right: 1.5rem;
+      z-index: 100;
 
       @include phone {
         display: block;
@@ -74,7 +94,7 @@
 
     &_line {
       width: 35px;
-      height: 3px;
+      height: 4px;
       background: $white;
 
       &:not(:last-child) {
@@ -88,8 +108,48 @@
 
     order: 2;
   }
+
+  &__show {
+    background: $black;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    z-index: 200;
+    width: 100%;
+    text-align: center;
+    animation: myAnimation 0.3s linear 0s 1 normal forwards;
+    transition: all 0.5s cubic-bezier(0.26, 0.59, 0.83, 0.67);
+
+    li {
+      display: flex;
+      align-items: center;
+      font-style: normal;
+      font-size: 1rem;
+
+      &:hover {
+        background: $white;
+      }
+
+      a {
+        padding: 0.5rem;
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
 }
 
 input[type="checkbox"] {
   display: none;
+}
+
+@keyframes myAnimation {
+  0% {
+    transform: translateY(-50px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
